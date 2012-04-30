@@ -153,7 +153,6 @@ class Services_IPPower
 
         foreach ($expected as $key => $value) {
             if (!isset($parsed[$key]) || $parsed[$key] != $value) {
-                var_dump($parsed);
                 $this->log('Unexpected value for key ' . $key . ': ' . $value);
                 $status = false;
             }
