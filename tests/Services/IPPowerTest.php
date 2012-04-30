@@ -15,9 +15,9 @@ class Services_IPPowerTest extends PHPUnit_Framework_TestCase
         $this->_ippower = new Services_IPPower();
     }
 
-    public function mockIPPower($data = '', $code = 200)
+    public function mockIPPower($data = '', $code = 200, $statusText = 'OK')
     {
-        $text  = 'HTTP/1.1 ' . $code . " OK\n";
+        $text  = 'HTTP/1.0 ' . $code . ' ' . $statusText . "\n";
         $text .= "Connection: close\n\n";
         $text .= $data;
 
