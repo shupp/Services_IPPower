@@ -192,6 +192,7 @@ class Services_IPPower
         return $this->setPowerMulti(array($outlet => $state));
     }
 
+    // TODO
     public function getPower($outlet = '')
     {
         return 1;
